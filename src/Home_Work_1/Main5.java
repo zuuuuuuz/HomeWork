@@ -10,14 +10,15 @@ public class Main5 {
         String str2 = "false";
         Scanner console = new Scanner(System.in);
         System.out.println("Сегодня рабочий день?(true/false)");
-        while (!console.hasNextBoolean()) {
+        while (!console.hasNextBoolean()) {  /*проверка на корректность ввода, если будет введена буква или
+                                            число или символ !=true или !=false цикл попросит еще раз ввести значение*/
             if(!console.hasNext(str1) || !console.hasNext(str2)){
                 System.out.println("Некорректный ввод, попробуй еще раз: true/false ?");
             }
             console.next();
         }
         weekday = console.nextBoolean();
-        if(weekday){
+        if(weekday){          //если рабочий день, то сразу понимаем что сейчас не отпуск
             vacation =false;
             System.out.println("кажется у вас и правда рабочая неделя");
         } else {
