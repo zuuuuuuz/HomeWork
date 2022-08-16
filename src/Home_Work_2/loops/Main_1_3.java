@@ -1,4 +1,4 @@
-package Home_Work_2;
+package Home_Work_2.loops;
 
 public class Main_1_3 {
     public static void main(String[] args) {
@@ -18,6 +18,12 @@ public class Main_1_3 {
             System.out.println(numberOne+"^"+powNumber+" = "+result);
         }else System.out.println("Некорректный ввод!\nПроверьте введенный аргумент");
     }
+    /**
+     * Метод pow1 возводит число в степень.
+     * @param a число
+     * @param b степень
+     * @return результат возведения
+     */
     public static double pow1(double a, long b){
         double resultat=1;
         for (int i = 1; i<=b ;i++){
@@ -25,6 +31,11 @@ public class Main_1_3 {
         }
         return resultat;
     }
+    /**
+     * Метод inputCheck проверяет вводимые данные
+     * @param a Строка
+     * @return true - проверку прошло; false -  проверку не прошло.
+     */
     public static boolean inputCheck(String a,String b){
         try {
             Double d = Double.parseDouble(a);

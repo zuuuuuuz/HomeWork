@@ -1,6 +1,6 @@
 package Home_Work_2.loops;
 
-public class Main_1_1 {
+public class Main_1_1_1 {
     public static void main(String[] args) {
         long number; long resultLong=1;
         String result="1";

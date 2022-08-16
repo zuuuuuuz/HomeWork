@@ -1,9 +1,9 @@
-package Home_Work_2;
+package Home_Work_2.loops;
 
 public class Main_1_2 {
     public static void main(String[] args) {
         long resultLong=1;
-        String number1="0";
+        String number1;
         String result="";
         if (args.length == 0) {
             System.out.println("Вы не выбрали аргумент для запуска программы");
@@ -14,7 +14,7 @@ public class Main_1_2 {
             String res = args[0];
             System.out.println("Ваш аргумент: "+res);
             System.out.print("Результат: ");
-            for (int i = 0; i<res.length() ;i++){    //i<991
+            for (int i = 0; i<res.length() ;i++){
                 String z = (String.valueOf(res.charAt(i)));
                 long y = Long.parseLong(z);
                 if (i==0){
@@ -35,6 +35,11 @@ public class Main_1_2 {
             }
         }
     }
+    /**
+     * Метод inputCheck проверяет вводимые данные
+     * @param a Строка
+     * @return true - проверку прошло; false -  проверку не прошло.
+     */
     public static boolean inputCheck(String a){
         try {
             long b=Long.parseLong(a);
