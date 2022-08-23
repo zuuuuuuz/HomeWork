@@ -15,7 +15,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     public double pow(double a, int b) {
         counterOperation++;
-        return Math.pow(a, b);
+        return super.pow(a, b);
     }
 
     /**
@@ -25,7 +25,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     public double module(double a) {
         counterOperation++;
-        return Math.abs(a);
+        return super.module(a);
     }
     /**
      * Находит квадратный корень числа
@@ -34,7 +34,7 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     public double sqrt(double a) {
         counterOperation++;
-        return Math.sqrt(a);
+        return super.sqrt(a);
     }
     /**
      * деления двух чисел
@@ -44,9 +44,8 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     public double divide(double a,double b){
         counterOperation++;
-        double result;
-        result=a/b;
-        return result;
+       
+        return super.divide(a,b);
     }
     /**
      * Находит произведение двух чисел
@@ -56,9 +55,8 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     public double multiple(double a, double b){
         counterOperation++;
-        double result;
-        result = a*b;
-        return result;
+     
+        return super.multiple(a,b);
     }
 
     /**
@@ -69,9 +67,8 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     public double minus(double a,double b){
         counterOperation++;
-        double result;
-        result = a-b;
-        return result;
+        
+        return super.minus(a,b);
     }
     /**
      * Производит сложение двух чисел
@@ -81,9 +78,8 @@ public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
      */
     public double plus(double a, double b){
         counterOperation++;
-        double result;
-        result = a+b;
-        return result;
+      
+        return super.plus(a,b);
     }
     /**
      * Определяет, сколько раз были вызваны методы данного класса
