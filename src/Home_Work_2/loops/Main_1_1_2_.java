@@ -27,10 +27,10 @@ public class Main_1_1_2_ {
         return str;
     }
 
-    public static long factorial2(byte number) {
+    public static long factorial2(int number) {
         if (number == 1) {
             return 1;
         }
-        return number *factorial2((byte)(number-1)) ;
+        return  (number *factorial2((number-1))) ;
     }
 }

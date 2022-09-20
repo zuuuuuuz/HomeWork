@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Main1 {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
-        long number1 = 0;   //переменные для ввода 2 чисел
-        long number2 = 0;
+        long number1;   //переменные для ввода 2 чисел
+        long number2;
 
         while (true) {                                 /*проверка на корректность ввода, если будет введена буква или
                                                                   символ, цикл попросит еще раз ввести значение*/
@@ -30,10 +30,10 @@ public class Main1 {
                     throw new RuntimeException();
                 }
                 break;
-                } catch (Exception e){
+            } catch (Exception e){
                     System.out.println("Выбери 2 или 10\nПопробуй еще раз:");
-                }
             }
+        }
 
         switch (binaryOrDecimal) {
                 case 2:     //если значение переменной binaryOrDecimal = 2, выводит результат в двоичной сс

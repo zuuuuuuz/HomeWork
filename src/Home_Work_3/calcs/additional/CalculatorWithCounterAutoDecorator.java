@@ -15,6 +15,7 @@ public class CalculatorWithCounterAutoDecorator implements ICalculator {
     public long getCountOperation() {
         return countOperation;
     }
+
     @Override
     public double divide(double a, double b) {
         countOperation++;
