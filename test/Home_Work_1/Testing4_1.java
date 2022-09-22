@@ -3,7 +3,7 @@ package Home_Work_1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class Testing{
+public class Testing4_1 {
     @Test
     public void Even(){
         Main4_1 number = new Main4_1();
