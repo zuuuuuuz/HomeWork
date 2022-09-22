@@ -23,6 +23,11 @@ public class Main4_2 {
             }
         }
 
+
+
+    }
+    public String compare(double numberOne, double numberTwo,double numberThree){
+        String str=" ";
         if (numberOne != numberTwo && numberTwo != numberThree && numberOne!=numberThree) {
             //если третье< первое <второго или третье> первое >второго=>первое число среднее
             boolean sredneeNumber1 = (numberOne < numberTwo && numberOne > numberThree) || (numberOne > numberTwo && numberOne < numberThree);
@@ -30,11 +35,11 @@ public class Main4_2 {
             boolean sredneeNumber2 = (numberTwo < numberOne && numberTwo > numberThree) || (numberTwo > numberOne && numberTwo < numberThree);
             //если 1 число не среднее и 2 не среднее => 3 число среднее
             if (sredneeNumber1) {
-                System.out.println("число "+ numberOne+ " является средним");
+                 str="число "+ numberOne+ " является средним";
             }else if (sredneeNumber2) {
-                     System.out.println("число "+numberTwo+" является средним");
-            }else System.out.printf("число " +numberThree+ "является средним");
-        }else System.out.println("Вы ввели одинаковые значения");
-
+                str="число "+numberTwo+" является средним";
+            }else str="число " +numberThree+ " является средним";
+        }else str="Вы ввели одинаковые значения";
+        return str;
     }
 }

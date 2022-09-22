@@ -1,5 +1,7 @@
 package Home_Work_2.arrays;
 
+import java.util.Arrays;
+
 import static Home_Work_2.utils.ArraysUtils.arrayFromConsole;
 
 public class WhileOperation implements IArraysOperation{
@@ -12,38 +14,45 @@ public class WhileOperation implements IArraysOperation{
     }
 
     @Override
-    public void arraysElements(int[] arr) {
+    public String arraysElements(int[] arr) {
         //перебор массива через цикл while
-        System.out.println("Перебор массива через цикл while:");
-        int i = 0;
-        while (i < arr.length) {
-            System.out.print(arr[i] + " ");
-            i++;
+        //System.out.println("Перебор массива через цикл while:");
+        String str="Перебор массива через цикл while: ";
+
+        for (int i = 0; i < arr.length; i++) {
+            str +=" " + arr[i];
         }
-        System.out.println();
+        return  str;
     }
 
     @Override
-    public void everySecondElement(int[] arr) {
+    public int[] everySecondElement(int[] arr) {
         //Каждый второй элемент массива через цикл while
-        System.out.println("Каждый второй элемент массива через цикл while:");
+        //System.out.println("Каждый второй элемент массива через цикл while:");
+        int[] str=new int[0];
         int i = 1;
+        int j = 0;
         while (i < arr.length) {
-            System.out.print(arr[i] + " ");
+            str = Arrays.copyOf(str, str.length + 1);
+            str[j] = arr[i];
             i+=2;
+            j++;
         }
-        System.out.println();
+        return str;
     }
 
     @Override
-    public void arrayReversive(int[] arr) {
+    public int[] arrayReversive(int[] arr) {
         //Вывести все элементы массива в обратном порядке через цикл while
-        System.out.println("все элементы массива в обратном порядке через цикл while:");
-        int i = arr.length-1;
+       // System.out.println("все элементы массива в обратном порядке через цикл while:");
+        int[] str = new int[arr.length];
+        int i = arr.length - 1;
+        int j = 0;
         while (i >= 0) {
-            System.out.print(arr[i] + " ");
+            str[j] = arr[i];
             i--;
+            j++;
         }
-        System.out.println();
+        return str;
     }
 }

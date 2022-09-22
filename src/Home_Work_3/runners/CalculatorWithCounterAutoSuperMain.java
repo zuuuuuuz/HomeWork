@@ -1,10 +1,10 @@
 package Home_Work_3.runners;
 
-import Home_Work_3.calcs.additional.CalculatorWithCounterAutoSuper;
+import Home_Work_3.calcs.additional.CalculatorWithMathExtends;
 
 public class CalculatorWithCounterAutoSuperMain {
     public static void main(String[] args) {
-        CalculatorWithCounterAutoSuper calc=new CalculatorWithCounterAutoSuper();
+        CalculatorWithMathExtends calc=new CalculatorWithMathExtends();
         // 4.1 + 15 * 7 + ( 28 / 5 ) ^ 2
         double result =calc.divide(28,5);
 

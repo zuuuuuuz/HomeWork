@@ -1,5 +1,7 @@
 package Home_Work_2.arrays;
 
+import java.util.Arrays;
+
 import static Home_Work_2.utils.ArraysUtils.arrayFromConsole;
 
 public class ForEachOperation implements IArraysOperation{
@@ -12,29 +14,47 @@ public class ForEachOperation implements IArraysOperation{
     }
 
     @Override
-    public void arraysElements(int[] arr) {
-        System.out.print("Перебор массива через цикл foreach: ");
+    public String arraysElements(int[] arr) {
+        //System.out.print("Перебор массива через цикл foreach: ");
+        String str="Перебор массива через цикл foreach: ";
         for (int element : arr) {
-            System.out.print(element + " ");
+            str+=(element + " ");
         }
-        System.out.println();
+        return str;
     }
 
     @Override
-    public void everySecondElement(int[] arr) {
-        System.out.print("Каждый второй элемент массива через цикл foreach: ");
+    public int[] everySecondElement(int[] arr) {
+       // System.out.print("Каждый второй элемент массива через цикл foreach: ");
+        int[] str = new int[0];
+        int i = 0, j = 0;
         for (int element : arr) {
-            System.out.print(element + " ");
+            i++;
+            if(i % 2 == 0){
+
+
+                str = Arrays.copyOf(str, str.length + 1);
+                str[j] = arr[i - 1];
+
+
+                j++;
+            }
+            if(i == arr.length){
+                break;
+            }
         }
-        System.out.println();
+        return str;
     }
 
     @Override
-    public void arrayReversive(int[] arr) {
-        System.out.print("Массив в обратном порядке через цикл foreach: ");
+    public int[] arrayReversive(int[] arr) {
+        //System.out.print("Массив в обратном порядке через цикл foreach: ");
+        int[] str=new int[arr.length];
+        int i =arr.length -1;
         for (int element : arr) {
-            System.out.print(element + " ");
+            str[i]=element;
+            i--;
         }
-        System.out.println();
+        return str;
     }
 }

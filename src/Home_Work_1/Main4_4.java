@@ -43,5 +43,13 @@ public class Main4_4 {
             default:
                 System.out.println("Некоректный ввод");
         }
+
+    }
+    public double toKbt(int byt){
+        return byt / 1024d;
+    }
+
+    public int toByt(int kbt){
+        return kbt * 1024;
     }
 }

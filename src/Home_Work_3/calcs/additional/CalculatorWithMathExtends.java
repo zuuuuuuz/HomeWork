@@ -1,8 +1,6 @@
 package Home_Work_3.calcs.additional;
 
-import Home_Work_3.calcs.simple.CalculatorWithMathExtends;
-
-public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
+public class CalculatorWithMathExtends extends Home_Work_3.calcs.simple.CalculatorWithMathExtends {
     /**
      * счётчик, отслеживающий количество вызовов методов данного класса
      */

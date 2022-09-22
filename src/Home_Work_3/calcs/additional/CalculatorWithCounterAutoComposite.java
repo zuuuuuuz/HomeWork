@@ -1,9 +1,7 @@
 package Home_Work_3.calcs.additional;
 
-import Home_Work_3.calcs.additional.CalculatorWithCounterAutoSuper;
-
 public class CalculatorWithCounterAutoComposite {
-   private CalculatorWithCounterAutoSuper calc=new CalculatorWithCounterAutoSuper();
+   private CalculatorWithMathExtends calc=new CalculatorWithMathExtends();
    public long getCounter(){
        return calc.getCountOperation();
    }

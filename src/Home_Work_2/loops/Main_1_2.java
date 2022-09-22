@@ -6,7 +6,7 @@ public class Main_1_2 {
     public String fibonachi(int a){
         long resultLong=1;
         String number1;
-        String result="";
+        String result="1";
         boolean cheker =inputCheck(Integer.toString(a));
         if (cheker){
             String res = Integer.toString(a);

@@ -1,7 +1,6 @@
 package Home_Work_2.arrays;
 import java.util.Arrays;
-import java.util.Scanner;
-import static Home_Work_2.utils.ArraysUtils.arrayFromConsole;
+
 import static Home_Work_2.utils.ArraysUtils.arrayRandom;
 
 public class Main_2_4 {
@@ -59,29 +58,35 @@ public class Main_2_4 {
     }
     /**
      * Элементы массива, которые меньше среднего арифметического
-     * @param array
      *
+     * @param array
+     * @return
      */
-    public static void Main_2_4_3(int[] array){
-        int numb=0;
-        int sredneeArif;
-        for (int i=0;i<array.length;i++){
-            numb+=array[i];
+    public static int[] Main_2_4_3(int[] array){
+        int[] arr = Arrays.copyOf(array,array.length);
+        int[] result = new int[0];
+        int j = 0;
+        int sum = 0;
+        for(int element : arr){
+            sum += element;
         }
-        sredneeArif=numb/ array.length;
-        System.out.print("Элементы массива, которые меньше среднего арифметического: ");
-        for (int i=0;i<array.length;i++){
-            if (array[i]<sredneeArif){
-                System.out.print(array[i]+" ");
+        double srednee = sum / arr.length;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] < srednee){
+                j++;
+                result = Arrays.copyOf(result, j);
+                result[j-1] = arr[i];
             }
         }
+        return result;
     }
     /**
      * Найти два наименьших (минимальных) элемента массива
-     * @param array
      *
+     * @param array
+     * @return
      */
-    public static void Main_2_4_4(int[] array){
+    public static int[] Main_2_4_4(int[] array){
         int min = 2147483647;
         int min2 =min;
         System.out.println();
@@ -93,7 +98,11 @@ public class Main_2_4 {
                 min2 =array[i];
             }
         }
-        System.out.println("два наименьших (минимальных) элемента массива "+min+" "+min2);
+        int[] result = new int[2];
+        result[0]=min;
+        result[1]=min2;
+        //System.out.println("два наименьших (минимальных) элемента массива "+min+" "+min2);
+        return result;
     }
     /**
      * Сжать массив, удалив элементы, принадлежащие интервалу
@@ -102,13 +111,32 @@ public class Main_2_4 {
      * @param max
      * @return
      */
-    public static int[] Main_2_4_5(int[] array,int min,int max){
-        for (int i =0;i<array.length;++i){
-            if (array[i]>min && array[i]<max){
-                array[i]=0;
+    public static int[] Main_2_4_5(int[] array, int min, int max){
+        int[] arr = Arrays.copyOf(array,array.length);
+
+        int i = 0;
+
+        while( i < arr.length){
+
+
+
+            if(min <= arr[i] && arr[i] <= max){
+                int j = i;
+
+                while (j < arr.length - 1){
+                    arr[j] = arr[j + 1];
+                    j++;
+
+
+
+                }
+                arr[arr.length - 1] = 0;
+            } else {
+                i++;
             }
         }
-        return array;
+
+        return arr;
     }
 
     /**
@@ -118,7 +146,7 @@ public class Main_2_4 {
      */
     public static int Main_2_4_6(int[] array){
         int result = 0;
-        for (int i =0;i<array.length;++i){
+        for (int i =0;i<array.length;i++){
             while (!(array[i]==0)){
                 result += array[i]%10;
                 array[i]/=10;

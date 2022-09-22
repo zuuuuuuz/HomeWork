@@ -10,12 +10,14 @@ public class Main_1_3 {
      * @param b степень
      * @return результат возведения
      */
-    public static double pow1(double a, long b){
+    public static String pow(double a, long b){
         double resultat=1;
+        String str= "";
         for (int i = 1; i<=b ;i++){
              resultat *=a;
         }
-        return resultat;
+        str=a+"^("+b+") = "+resultat;
+        return str;
     }
     /**
      * Метод inputCheck проверяет вводимые данные

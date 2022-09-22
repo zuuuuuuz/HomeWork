@@ -20,4 +20,7 @@ public class Main4_1 {
             System.out.println("Число является четным");
         }else System.out.println("Число является нечетным");
     }
+    public boolean evenOrOdd(long number){
+        return number % 2 == 0;
+    }
 }

@@ -98,7 +98,7 @@ public class DataContainer<T>{
     }
 
     public String toString() {
-        String str = " [ ";
+        String str = "[";
         for (int i = 0; i < data.length; i++) {
             if (i == 0 ){
                 if (data[i] != null){
@@ -112,10 +112,10 @@ public class DataContainer<T>{
                     }
                 }
             }else if (data[i] != null) {
-                str += "   "+data[i] ;
+                str += ", "+data[i] ;
             }
         }
-        str +=" ] ";
+        str +="]";
         return str;
     }
 

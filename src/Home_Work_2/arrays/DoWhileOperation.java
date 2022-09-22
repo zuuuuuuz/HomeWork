@@ -1,48 +1,58 @@
 package Home_Work_2.arrays;
+import java.util.Arrays;
+
 import static Home_Work_2.utils.ArraysUtils.arrayFromConsole;
 
 public class DoWhileOperation implements IArraysOperation {
-    public static void main(String[] args){
-        DoWhileOperation container = new DoWhileOperation();
-        int[] arr=arrayFromConsole();
-        container.arraysElements(arr);
-        container.everySecondElement(arr);
-        container.arrayReversive(arr);
-    }
+
 
     @Override
-    public void arraysElements(int[] arr) {
+    public String arraysElements(int[] arr) {
         //Перебор массива через цикл do...while
+        //int[] str=new int[arr.length];
         int i = 0;
-        System.out.println("Перебор массива через цикл do...while: ");
-        do {
-            System.out.print(arr[i] + " ");
-            i++;
-        } while (i < arr.length);
-        System.out.println();
+        String str = "";
+        //System.out.println("Перебор массива через цикл do...while: ");
+        for (int element : arr) {
+            str = str + " " + element;
+        }
+        return str;
     }
 
     @Override
-    public void everySecondElement(int[] arr) {
-        //Каждый второй элемент массива через цикл do...while
-        int i = 1;
-        System.out.println("Каждый второй элемент массива через цикл do...while: ");
-        do {
-            System.out.print(arr[i] + " ");
-            i+=2;
-        } while (i < arr.length);
-        System.out.println();
+    public int[] everySecondElement(int[] arr) {
+        int [] str = new int[0];
+        int x = 0;
+        int z = 0;
+        for (int element : arr) {
+
+            x++;
+
+            if(x % 2 == 0){
+
+                str = Arrays.copyOf(str, str.length + 1);
+
+                str[z] = arr[x - 1];
+                z++;
+            }
+            if(x == arr.length){
+                break;
+            }
+        }
+        return str;
     }
 
+
     @Override
-    public void arrayReversive(int[] arr) {
+    public int[] arrayReversive(int[] arr) {
         //Вывести все элементы массива в обратном порядке через цикл do...while
         int i = arr.length-1;
-        System.out.println("все элементы массива в обратном порядке через цикл do...while: ");
-        do {
-            System.out.print(arr[i] + " ");
+        int[] str=new int[arr.length];
+        //System.out.println("все элементы массива в обратном порядке через цикл do...while: ");
+        for (int element : arr) {
+            str[i] = element;
             i--;
-        } while (i >= 0);
-        System.out.println();
+        }
+        return str;
     }
 }

@@ -2,7 +2,7 @@ package Home_Work_2.loops;
 
 public class Main1_4 {
     public long multipleMax(long userNumber){
-        long number=1;
+        long number=1L;
         try {
             if (userNumber == 0 || userNumber == 1 || userNumber == -1) {
                 throw new Exception("Переполнения не будет");

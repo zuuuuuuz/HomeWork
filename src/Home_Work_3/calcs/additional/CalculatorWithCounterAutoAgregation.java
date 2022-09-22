@@ -1,8 +1,8 @@
 package Home_Work_3.calcs.additional;
 
 public class CalculatorWithCounterAutoAgregation {
-    private CalculatorWithCounterAutoSuper calculator;
-    public CalculatorWithCounterAutoAgregation(CalculatorWithCounterAutoSuper calc){
+    private CalculatorWithMathExtends calculator;
+    public CalculatorWithCounterAutoAgregation(CalculatorWithMathExtends calc){
         calculator=calc;
     }
     public long getCounter(){

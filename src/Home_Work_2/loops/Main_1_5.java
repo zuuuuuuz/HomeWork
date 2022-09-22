@@ -70,17 +70,15 @@ public class Main_1_5 {
         for (int i=1;i<q;i++){
             //long v=(q1+q2);
             if (i==1){
-                System.out.print("Последовательность Фибоначчи: "+q1+"  ");
-            }else if(i==2){
-                System.out.print(q2+" ");
+                str="Последовательность Фибоначчи: "+q1;
             }else if(i!=1||i!=2) {
-                System.out.printf(" %d ", q1 + q2);
+                str+=" " + q2;
                 b = q1;
                 q1 = q2;
                 q2 = q1 + b;
             }
-
-        }return str="";
+        String res=str;
+        }return str;
     }
     /**
      *Метод выводит ряд чисел в диапазоне с шагом.
@@ -97,7 +95,7 @@ public class Main_1_5 {
             min= min+step;
         }
         System.out.print(" "+max);
-        return str2="";
+        return str2=" "+max;
     }
     /**
      * Метод переворачивает число.
@@ -112,6 +110,6 @@ public class Main_1_5 {
             number=number/10;
         }
         System.out.println(m);
-        return str4="";
+        return str4=""+m;
     }
 }
