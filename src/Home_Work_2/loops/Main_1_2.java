@@ -1,19 +1,15 @@
 package Home_Work_2.loops;
 
+import javax.management.StringValueExp;
+
 public class Main_1_2 {
-    public static void main(String[] args) {
+    public String fibonachi(int a){
         long resultLong=1;
         String number1;
         String result="";
-        if (args.length == 0) {
-            System.out.println("Вы не выбрали аргумент для запуска программы");
-        }
-        boolean cheker =inputCheck(args[0]);
-
+        boolean cheker =inputCheck(Integer.toString(a));
         if (cheker){
-            String res = args[0];
-            System.out.println("Ваш аргумент: "+res);
-            System.out.print("Результат: ");
+            String res = Integer.toString(a);
             for (int i = 0; i<res.length() ;i++){
                 String z = (String.valueOf(res.charAt(i)));
                 long y = Long.parseLong(z);
@@ -24,17 +20,11 @@ public class Main_1_2 {
             }
             number1= Long.toString(resultLong);
             result +="="+number1;
-            System.out.println(result);
-        }if (!cheker){
-            try{
-                Double.parseDouble(args[0]);
-                System.out.println("Введено не целое число\nПроверьте введенный аргумент");
-            }catch (Exception e) {
-                System.out.println("Введено не число!");
-                System.out.println("Некорректный ввод!\nПроверьте введенный аргумент");
-            }
-        }
+            return result;
+        }else return null;
+
     }
+
     /**
      * Метод inputCheck проверяет вводимые данные
      * @param a Строка
@@ -42,7 +32,7 @@ public class Main_1_2 {
      */
     public static boolean inputCheck(String a){
         try {
-            long b=Long.parseLong(a);
+            int b=Integer.parseInt(a);
             return b > 9;
         }catch (Exception e){
             return false;
