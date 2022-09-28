@@ -1,12 +1,14 @@
 package Home_Work_5.UtilsGenerators;
 
+import Home_Work_5.Interface.ICreate;
+
 import java.io.*;
 import java.security.SecureRandom;
 
-public class RealNameFromFile {
+public class RealNameFromFile implements ICreate {
     private SecureRandom random = new SecureRandom();
 
-    public String nameGeneratorFromFile(){
+    public String create(){
         String name="";
         try{
             int c = this.random.nextInt(10);

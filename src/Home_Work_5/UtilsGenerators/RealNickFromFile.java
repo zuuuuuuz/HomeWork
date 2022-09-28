@@ -1,13 +1,15 @@
 package Home_Work_5.UtilsGenerators;
 
+import Home_Work_5.Interface.ICreate;
+
 import java.io.*;
 import java.security.SecureRandom;
 
-public class RealNickFromFile {
+public class RealNickFromFile implements ICreate {
 
     private SecureRandom rand = new SecureRandom();
 
-    public String generate(){
+    public String create(){
         String nick="";
         try{
             int c = this.rand.nextInt(10);

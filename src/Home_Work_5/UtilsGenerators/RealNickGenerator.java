@@ -1,12 +1,14 @@
 package Home_Work_5.UtilsGenerators;
 
+import Home_Work_5.Interface.ICreate;
+
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RealNickGenerator {
+public class RealNickGenerator implements ICreate {
     private SecureRandom rand = new SecureRandom();
-    public String generateNick(){
+    public String create(){
         List<String> nicks = new ArrayList<>();
         nicks.add("ДанДат");
         nicks.add("Виттатрон");

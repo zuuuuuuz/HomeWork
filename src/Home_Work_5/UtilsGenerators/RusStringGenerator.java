@@ -1,8 +1,10 @@
 package Home_Work_5.UtilsGenerators;
 
+import Home_Work_5.Interface.ICreate;
+
 import java.util.concurrent.ThreadLocalRandom;
 
-public class RusStringGenerator {
+public class RusStringGenerator implements ICreate {
     private ThreadLocalRandom random = ThreadLocalRandom.current();
     private int min;
     private int max;
@@ -21,7 +23,7 @@ public class RusStringGenerator {
         this.min = 1;
         this.max = 10;
     }
-    public String generate(){
+    public String create(){
         int a = this.random.nextInt(this.min,this.max+1);
 
         StringBuilder build = new StringBuilder();

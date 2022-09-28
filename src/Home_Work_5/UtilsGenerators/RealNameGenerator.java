@@ -1,11 +1,13 @@
 package Home_Work_5.UtilsGenerators;
 
+import Home_Work_5.Interface.ICreate;
+
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RealNameGenerator {
-    public String randomRealName(){
+public class RealNameGenerator implements ICreate {
+    public String create(){
         SecureRandom rand = new SecureRandom();
 
         List<String> names = new ArrayList<>();
