@@ -19,7 +19,7 @@ public class Menu implements IMenu {
         BufferedReader reader = null;
 
         try{
-            reader = new BufferedReader(new FileReader("E:\\JetBrains\\project\\JD1\\HomeWork\\src\\Home_Work_6\\dto\\Menu.txt"));
+            reader = new BufferedReader(new FileReader("Home_Work_6/dto/Menu.txt"));
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
         }
