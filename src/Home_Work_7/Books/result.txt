@@ -1,0 +1,1 @@
+file name: 3.txt, word- я, amount-0file name: 3.txt, word- нет, amount-0file name: 3.txt, word- джддл, amount-0file name: 3.txt, word- и, amount-0
