@@ -52,8 +52,8 @@ public class Reader {
             reader = new BufferedReader(new FileReader(adress));
             int read=reader.read();
 
-            while((read=reader.read())!=-1){
-                text = text +read;
+            while((read=reader.read()) != -1){
+                text = text +(char)read;
             }
         } catch (FileNotFoundException e) {
             System.out.println("path not found");
@@ -80,7 +80,7 @@ public class Reader {
 
     public List readToList(){
         try {
-            reader = new BufferedReader(new FileReader("C:\\Users\\polin\\IdeaProjects\\project\\src\\Home_Work_7\\Война и мир_книга.txt"));//HomeWork\\src\\Home_Work_7\\Война и мир_книга.txt"
+            reader = new BufferedReader(new FileReader("HomeWork\\src\\Home_Work_7\\Война и мир_книга.txt"));
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
         }
