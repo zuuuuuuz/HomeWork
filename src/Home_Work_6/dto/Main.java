@@ -19,25 +19,25 @@ public class Main {
         IOrderStatus checkPizza = pizzeria.check(ticket);
 
         System.out.println(checkPizza.isDone());
-
-        System.out.println(checkPizza.getHistory());
-
         Thread.sleep(10000);
-
 
         System.out.println(checkPizza.getHistory());
         Thread.sleep(10000);
 
+        System.out.println(checkPizza.isDone());
 
         System.out.println(checkPizza.getHistory());
+        Thread.sleep(10000);
+        System.out.println(checkPizza.isDone());
+
+        System.out.println(checkPizza.getHistory());
+        System.out.println(checkPizza.isDone());
         Thread.sleep(10000);
 
         System.out.println(checkPizza.getHistory());
 
         System.out.println(checkPizza.isDone());
 
-        IDoneOrder pack = pizzeria.pickup(ticket);
-        System.out.println(pack.getItems());
 
     }
 }

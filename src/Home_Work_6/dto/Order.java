@@ -24,11 +24,18 @@ public class Order implements IOrder {
 
     @Override
     public List<ISelectedItem> getSelected() {
-        return this.items;
+        return items;
     }
     public String toString(){
         StringBuilder resultOrder = new StringBuilder();
-        resultOrder.append("Ваш заказ: "+items);
+        resultOrder.append("Ваш заказ: ");
+        int itemsLength=items.size();
+        for (ISelectedItem item : items) {
+            resultOrder.append(item.getRow().getDescription().getName())
+                    .append(" : ")
+                    .append(item.getCount())
+                    .append("; ");
+        }
         return resultOrder.toString();
     }
 }

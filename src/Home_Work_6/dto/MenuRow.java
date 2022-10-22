@@ -16,11 +16,11 @@ public class MenuRow implements IMenuRow {
 
     @Override
     public IPizzaInfo getDescription() {
-        return this.description;
+        return description;
     }
 
     @Override
     public double getPrice() {
-        return this.price;
+        return price;
     }
 }

@@ -21,12 +21,12 @@ public class Ticket implements ITicket {
 
     @Override
     public String getNumber() {
-        return this.number;
+        return number;
     }
 
     @Override
     public LocalDateTime getCreatAt() {
-        return this.createAt;
+        return createAt;
     }
 
     @Override

@@ -13,18 +13,18 @@ public class Pizza implements IPizza {
 
     @Override
     public String getName() {
-        return this.name;
+        return name;
     }
 
     @Override
     public int getSize() {
-        return this.size;
+        return size;
     }
 
     public String toString(){
         StringBuilder resultPizza = new StringBuilder();
-        resultPizza.append("Название: ").append(getName())
-                .append(", размер: ").append(getSize());
+        resultPizza.append("Название: ").append(name)
+                .append(", размер: ").append(size);
         return resultPizza.toString();
     }
 }

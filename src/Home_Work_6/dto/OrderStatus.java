@@ -23,6 +23,7 @@ public class OrderStatus implements IOrderStatus {
     @Override
     public List<IStage> getHistory() {
         List<IStage> list = new ArrayList<>();
+
         list.add(new Stage("Заказ был принят: ",ticket.getCreatAt().toLocalTime()));
 
         if (LocalTime.now().minusSeconds(10).isAfter(ticket.getCreatAt().toLocalTime())){
@@ -45,6 +46,10 @@ public class OrderStatus implements IOrderStatus {
 
     @Override
     public boolean isDone() {
-        return LocalTime.now().minusSeconds(40).isBefore(ticket.getCreatAt().toLocalTime());
+        boolean state = false;
+        if (LocalTime.now().minusSeconds(40).isAfter(ticket.getCreatAt().toLocalTime())){
+            state = true;
+        }
+        return state;
     }
 }

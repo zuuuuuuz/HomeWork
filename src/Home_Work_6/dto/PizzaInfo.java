@@ -31,9 +31,9 @@ public class PizzaInfo implements IPizzaInfo {
 
     public String toString(){
     StringBuilder result = new StringBuilder();
-    result.append(getName())
-            .append("\nСостав: ").append(getDescription())
-            .append("\nДиаметр: ").append(getSize())
+    result.append(name)
+            .append("\nСостав: ").append(description)
+            .append("\nДиаметр: ").append(size)
             .append("\n");
     return result.toString();
     }

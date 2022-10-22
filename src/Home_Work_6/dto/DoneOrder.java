@@ -20,12 +20,12 @@ public class DoneOrder implements IDoneOrder {
 
     @Override
     public ITicket getTicket() {
-        return this.ticket;
+        return ticket;
     }
 
     @Override
     public List<IPizza> getItems() {
-        return this.listPizza;
+        return listPizza;
     }
 
 

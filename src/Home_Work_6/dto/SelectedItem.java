@@ -14,17 +14,17 @@ public class SelectedItem implements ISelectedItem {
 
     @Override
     public IMenuRow getRow() {
-        return  this.row;
+        return  row;
     }
 
     @Override
     public int getCount() {
-        return this.count;
+        return count;
     }
 
     public String toString(){
         StringBuilder result = new StringBuilder();
-        result.append("Выбрана: ").append(getRow()).append(", количество: ").append(getCount());
+        result.append("Выбрана: ").append(row).append(", количество: ").append(count);
         return result.toString();
     }
 }
