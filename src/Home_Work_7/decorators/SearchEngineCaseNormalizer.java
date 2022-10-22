@@ -11,28 +11,19 @@ public class SearchEngineCaseNormalizer implements ISearchEngine {
         this.iSearchEngine = iSearchEngine;
         this.lastSymbol = lastSymbol;
     }
-    /*public long search(String str, Pattern word){
-        long counter = 0;
-        boolean state;
-        Matcher match = word.matcher(str);
-        while (match.find()){
-            if ()
-            if ()
-        }
-    }*/
     public long search(String text, String word) {
-        if ((word.endsWith("а")) || word.endsWith("о") || word.endsWith("ю") || word.endsWith("у")
+        if (word.endsWith("а") || word.endsWith("о") || word.endsWith("ю") || word.endsWith("у")
                 || word.endsWith("ы") || word.endsWith("и") || word.endsWith("я") || word.endsWith("е")) {
             word = word.substring(0, word.length() - 1);
         }
-        if ((word.endsWith("ом")) || word.endsWith("ею") || word.endsWith("ью") || word.endsWith("ем")
+        if (word.endsWith("ом") || word.endsWith("ею") || word.endsWith("ью") || word.endsWith("ем")
                 || word.endsWith("ою") || word.endsWith("ой") || word.endsWith("ей") || word.endsWith("ым")
                 || word.endsWith("ое") || word.endsWith("ее") || word.endsWith("ая") || word.endsWith("яя")
                 || word.endsWith("ие") || word.endsWith("ые") || word.endsWith("их") || word.endsWith("ых")
                 || word.endsWith("ую") || word.endsWith("юю") || word.endsWith("ый") || word.endsWith("ий")) {
             word = word.substring(0, word.length() - 2);
         }
-        if ((word.endsWith("ого")) || word.endsWith("его") || word.endsWith("ому") || word.endsWith("ему")
+        if (word.endsWith("ого") || word.endsWith("его") || word.endsWith("ому") || word.endsWith("ему")
                 || word.endsWith("ыми") || word.endsWith("ими")) {
             word = word.substring(0, word.length() - 3);
         }
@@ -48,7 +39,7 @@ public class SearchEngineCaseNormalizer implements ISearchEngine {
                 .replaceAll(word + "ый", word).replaceAll(word + "ий", word).replaceAll(word + "а", word)
                 .replaceAll(word + "о", word).replaceAll(word + "ю", word).replaceAll(word + "у", word)
                 .replaceAll(word + "ы", word).replaceAll(word + "и", word).replaceAll(word + "я", word)
-                .replaceAll(word + "е", word);
+                .replaceAll(word + "е", word).replaceAll(word, word + lastSymbol);;
         return iSearchEngine.search(text,word+lastSymbol);
     }
 }
